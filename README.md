@@ -9,26 +9,20 @@ class ExpenseTracker:
             "work": 0,
             "fun": 0
         }
-
     def get_total(self):
         total = 0
         for category, amount in self.expenses.items():
             total += amount
         return total
-
     def get_expenses_by_category(self, category):
         return self.expenses[category]
-
     def update_expense(self, category):
         amount = float(input(f"Enter expense for {category}: "))
         self.expenses[category] = amount
-
     def display_expenses(self):
         for category, amount in self.expenses.items():
             print(f"{category}: {amount}")
-
 tracker = ExpenseTracker()
-
 while True:
     print("1. Update expenses")
     print("2. Get total expenses")
@@ -36,7 +30,6 @@ while True:
     print("4. Display all expenses")
     print("5. Exit")
     choice = input("Choose an option: ")
-
     if choice == "1":
         for category in tracker.expenses.keys():
             tracker.update_expense(category)
