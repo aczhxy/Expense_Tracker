@@ -44,7 +44,6 @@ class ExpenseTracker:
          
             print(f"{category}: {amount}")
             
-
 tracker = ExpenseTracker()
 
 while True:
